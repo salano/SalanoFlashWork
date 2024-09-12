@@ -9,10 +9,8 @@ def test_home_route():
     assert b'Hello Salano' in response.data
 
 
+# test hello parameter route
 def test_hello_route():
-    data = {
-    'name': 'Tanis'
-    }
     with app.test_client() as c:
         response = c.get('/hello/Tanis')
         #assert requests.args['name'] == 'Tanis'
