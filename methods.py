@@ -6,7 +6,7 @@ app = Flask(__name__)
 def welcome(name):
     return 'Hello %s ' % name
 
-
+# route for login
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
