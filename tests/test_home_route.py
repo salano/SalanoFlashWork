@@ -18,6 +18,7 @@ def test_hello_route():
         #assert requests.args['name'] == 'Tanis'
         assert response.status_code == 200
         assert b'Hello Tanis' in response.data
+        assert response.data.decode('utf-8') == 'Hello Tanis'
 
 
 test_home_route()
