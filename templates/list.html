@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+    <body>
+        <table border="1"   >
+            <thead>
+                <td><h3>Name</h3></td>
+                <td><h3>Address</h3></td>
+                <td><h3>City</h3></td>
+                <td><h3>Zip Code</h3></td>
+            </thead>
+            {% for row in rows %}
+                <tr>
+                    <th><h3> {{row['name']}} </h3></th>
+                    <th><h3> {{row['addr']}} </h3></th>
+                    <th><h3> {{row['city']}} </h3></th>
+                    <th><h3> {{row['pin']}} </h3></th>
+                </tr>
+            {% endfor %}
+        </table>
+        <h2><a href="/"> Go back to home page</a></h2>
+    </body>
+</html>

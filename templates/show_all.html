@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+    <body>
+        <h3> <a href="{{ url_for('show_all')}}">Students - Flask Alchemy</a></h3>
+        <hr />
+        {% for message in get_flashed_messages() %}
+            {{ message }}
+        {% endfor %}
+        <h3>Students (<a href="{{url_for('new')}}">Add Student</a>)</h3>
+        <table border="1"   >
+            <thead>
+                <td><h3>Name</h3></td>
+                <td><h3>Address</h3></td>
+                <td><h3>City</h3></td>
+                <td><h3>Zip Code</h3></td>
+            </thead>
+            {% for student in students %}
+                <tr>
+                    <th><h3> {{student.name}} </h3></th>
+                    <th><h3> {{student.addr}} </h3></th>
+                    <th><h3> {{student.city}} </h3></th>
+                    <th><h3> {{student.pin}} </h3></th>
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
